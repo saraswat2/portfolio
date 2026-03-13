@@ -3,6 +3,7 @@ import { FiGithub, FiMail } from 'react-icons/fi'
 import { SiLeetcode } from 'react-icons/si'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import profilePhoto from '/myphotos.png'
 
 function Home() {
   const skills = ['HTML', 'CSS', 'JavaScript', 'Node.js', 'React', 'Git', 'GitHub']
@@ -234,7 +235,7 @@ function Home() {
                 background: '#1a1a2e'
               }}>
                 <img 
-                  src="/myphotos.png" 
+                  src={profilePhoto} 
                   alt="Himanshu Saraswat"
                   style={{
                     width: '100%',

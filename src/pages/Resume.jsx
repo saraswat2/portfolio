@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import { FiDownload, FiExternalLink } from 'react-icons/fi'
+import resumeImage from '/resume.png'
 
 function Resume() {
-  // IMPORTANT: Save your resume image as "resume.png" in the "public" folder
-  const resumeImageUrl = "/resume.png"
+  const resumeImageUrl = resumeImage
   
   return (
     <div className="dark-hero-page">
