@@ -60,7 +60,7 @@ function About() {
               >
                 I specialize in building scalable web applications and solving complex algorithmic 
                 problems. With a strong foundation in <strong style={{ color: '#ff6b6b' }}>Data Structures & Algorithms</strong>, 
-                I've solved <strong style={{ color: '#ff6b6b' }}>500+ problems on LeetCode</strong> and actively participate in 
+                I've solved <strong style={{ color: '#ff6b6b' }}>200+ problems on LeetCode</strong> and actively participate in 
                 competitive programming.
               </motion.p>
               
@@ -127,7 +127,7 @@ function About() {
             style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}
           >
             {[
-              { icon: '🧩', number: '500+', label: 'LeetCode Problems', color: '#ff6b6b' },
+              { icon: '🧩', number: '200+', label: 'LeetCode Problems', color: '#ff6b6b' },
               { icon: '🚀', number: '10+', label: 'Projects Completed', color: '#ff8e53' },
               { icon: '🏆', number: '5+', label: 'Certifications', color: '#667eea' },
               { icon: '📚', number: '6.5', label: 'CGPA', color: '#764ba2' }

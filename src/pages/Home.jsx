@@ -307,7 +307,7 @@ function Home() {
               🧩
             </motion.div>
             <h3>Problem Solving</h3>
-            <p>500+ problems solved on LeetCode with strong DSA and algorithmic skills</p>
+            <p>200+ problems solved on LeetCode with strong DSA and algorithmic skills</p>
           </motion.div>
         </div>
       </motion.section>
@@ -319,7 +319,7 @@ function Home() {
         transition={{ delay: 1.3 }}
       >
         {[
-          { number: "500+", label: "LeetCode Problems", icon: "🎯" },
+          { number: "200+", label: "LeetCode Problems", icon: "🎯" },
           { number: "10+", label: "Projects Completed", icon: "🚀" },
           { number: "5+", label: "Certifications", icon: "🏆" },
           { number: "6.5", label: "CGPA", icon: "📚" }
