@@ -31,28 +31,28 @@ function Education() {
       title: "C/C++/Java Programming",
       issuer: "iamneo",
       date: "Aug 2025",
-      icon: "💻",
+      image: "/Screenshot 2026-03-20 143133.png",
       link: "https://drive.google.com/drive/folders/1U6ACFXcIeLnb7o5ruEpgrSEImUkgySYC?ths=true"
     },
     {
       title: "The Bits and Bytes of Computer Networking",
       issuer: "Google",
       date: "Sep 2024",
-      icon: "🌐",
+      image: "/Screenshot 2026-03-20 143238.png",
       link: "https://drive.google.com/drive/folders/1U6ACFXcIeLnb7o5ruEpgrSEImUkgySYC?ths=true"
     },
     {
       title: "Software Development Processes and Methodologies",
       issuer: "Coursera",
       date: "Apr 2024",
-      icon: "🚀",
+      image: "/Screenshot 2026-03-20 143307.png",
       link: "https://coursera.org/verify/JUPX4MJQAVL2"
     },
     {
-      title: "Cipher Schools (EdTech Company) Certificate",
+      title: "Cipher Schools Certificate",
       issuer: "Cipher Schools",
       date: "Jun 2025",
-      icon: "🎓",
+      image: "/Screenshot 2026-03-20 143423.png",
       link: "#"
     }
   ]
@@ -134,68 +134,81 @@ function Education() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.7 + index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
+                whileHover={{ scale: 1.03, y: -8 }}
                 style={{
                   background: 'rgba(255, 255, 255, 0.05)',
                   backdropFilter: 'blur(10px)',
-                  padding: '2rem',
                   borderRadius: '15px',
                   border: '1px solid rgba(255, 255, 255, 0.1)',
-                  textAlign: 'center',
-                  position: 'relative',
-                  overflow: 'hidden'
+                  overflow: 'hidden',
+                  cursor: 'pointer'
                 }}
               >
-                <motion.div
-                  style={{
+                {/* Certificate Image */}
+                <div style={{
+                  width: '100%',
+                  height: '200px',
+                  overflow: 'hidden',
+                  position: 'relative'
+                }}>
+                  <img
+                    src={cert.image}
+                    alt={cert.title}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      objectFit: 'cover',
+                      objectPosition: 'top',
+                      transition: 'transform 0.4s ease'
+                    }}
+                    onMouseEnter={e => e.target.style.transform = 'scale(1.05)'}
+                    onMouseLeave={e => e.target.style.transform = 'scale(1)'}
+                  />
+                  <div style={{
                     position: 'absolute',
-                    top: 0,
+                    bottom: 0,
                     left: 0,
                     right: 0,
-                    bottom: 0,
-                    background: 'radial-gradient(circle at center, rgba(255,107,107,0.1), transparent)',
-                    opacity: 0
-                  }}
-                  whileHover={{ opacity: 1 }}
-                />
-                
-                <div style={{ fontSize: '3rem', marginBottom: '1rem', position: 'relative', zIndex: 1 }}>
-                  {cert.icon}
+                    height: '60px',
+                    background: 'linear-gradient(to top, rgba(26,26,46,0.9), transparent)'
+                  }} />
                 </div>
-                <h3 style={{ fontSize: '1.3rem', color: '#fff', marginBottom: '0.5rem', position: 'relative', zIndex: 1 }}>
-                  {cert.title}
-                </h3>
-                <p style={{ color: '#b0b0b0', marginBottom: '0.5rem', position: 'relative', zIndex: 1 }}>
-                  {cert.issuer}
-                </p>
-                <span style={{ color: '#ff6b6b', fontSize: '0.9rem', display: 'block', marginBottom: '1.5rem', position: 'relative', zIndex: 1 }}>
-                  {cert.date}
-                </span>
-                
-                <motion.a
-                  href={cert.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    padding: '0.75rem 1.5rem',
-                    background: '#ff6b6b',
-                    color: '#fff',
-                    borderRadius: '8px',
-                    textDecoration: 'none',
-                    fontWeight: '600',
-                    fontSize: '0.95rem',
-                    position: 'relative',
-                    zIndex: 1
-                  }}
-                >
-                  <FiExternalLink size={18} />
-                  View Certificate
-                </motion.a>
+
+                {/* Card Content */}
+                <div style={{ padding: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.1rem', color: '#fff', marginBottom: '0.4rem', lineHeight: '1.4' }}>
+                    {cert.title}
+                  </h3>
+                  <p style={{ color: '#ff8e53', fontWeight: '600', marginBottom: '0.3rem', fontSize: '0.95rem' }}>
+                    {cert.issuer}
+                  </p>
+                  <span style={{ color: '#888', fontSize: '0.85rem', display: 'block', marginBottom: '1.2rem' }}>
+                    📅 {cert.date}
+                  </span>
+
+                  <motion.a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.5rem',
+                      padding: '0.6rem 1.2rem',
+                      background: 'linear-gradient(135deg, #ff6b6b, #ff8e53)',
+                      color: '#fff',
+                      borderRadius: '8px',
+                      textDecoration: 'none',
+                      fontWeight: '600',
+                      fontSize: '0.9rem'
+                    }}
+                  >
+                    <FiExternalLink size={16} />
+                    View Certificate
+                  </motion.a>
+                </div>
               </motion.div>
             ))}
           </div>
