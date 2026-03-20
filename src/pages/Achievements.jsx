@@ -8,7 +8,7 @@ function Achievements() {
       description: "Achieved 4th position in university-level hackathon",
       date: "Mar 2024",
       image: "/portfolio/hackathon.png",
-      certificateLink: "https://drive.google.com/drive/folders/1U6ACFXcIeLnb7o5ruEpgrSEImUkgySYC?ths=true"
+      certificateLink: "https://drive.google.com/file/d/12lWML5bILeB4_THt2PvhLa5hNLiEeuxl/view?usp=drive_link"
     },
     {
       title: "AWS Student Community Day",

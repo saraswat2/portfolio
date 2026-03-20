@@ -32,7 +32,7 @@ function Education() {
       issuer: "iamneo",
       date: "Aug 2025",
       image: "/portfolio/cpp.png",
-      link: "https://drive.google.com/drive/folders/1U6ACFXcIeLnb7o5ruEpgrSEImUkgySYC?ths=true"
+      link: "https://drive.google.com/file/d/1mcplo-CaHKQt3Hsz3kQ1ctnOfMZ51LBS/view?usp=drive_link"
     },
     {
       title: "The Bits and Bytes of Computer Networking",
@@ -53,7 +53,7 @@ function Education() {
       issuer: "Cipher Schools",
       date: "Jun 2025",
       image: "/portfolio/image5.png",
-      link: "#"
+      link: "https://drive.google.com/file/d/11kWv-_ZI2e0sUYI6J4mj1uxRpdcnQMCB/view?usp=drive_link"
     }
   ]
 
