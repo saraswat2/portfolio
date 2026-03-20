@@ -31,28 +31,28 @@ function Education() {
       title: "C/C++/Java Programming",
       issuer: "iamneo",
       date: "Aug 2025",
-      image: "/Screenshot 2026-03-20 143133.png",
+      image: "/portfolio/cert1.png",
       link: "https://drive.google.com/drive/folders/1U6ACFXcIeLnb7o5ruEpgrSEImUkgySYC?ths=true"
     },
     {
       title: "The Bits and Bytes of Computer Networking",
       issuer: "Google",
       date: "Sep 2024",
-      image: "/Screenshot 2026-03-20 143238.png",
+      image: "/portfolio/cert2.png",
       link: "https://drive.google.com/drive/folders/1U6ACFXcIeLnb7o5ruEpgrSEImUkgySYC?ths=true"
     },
     {
       title: "Software Development Processes and Methodologies",
       issuer: "Coursera",
       date: "Apr 2024",
-      image: "/Screenshot 2026-03-20 143307.png",
+      image: "/portfolio/cert3.png",
       link: "https://coursera.org/verify/JUPX4MJQAVL2"
     },
     {
       title: "Cipher Schools Certificate",
       issuer: "Cipher Schools",
       date: "Jun 2025",
-      image: "/Screenshot 2026-03-20 143423.png",
+      image: "/portfolio/cert4.png",
       link: "#"
     }
   ]
