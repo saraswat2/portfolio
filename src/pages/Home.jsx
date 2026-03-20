@@ -322,7 +322,7 @@ function Home() {
           { number: "200+", label: "LeetCode Problems", icon: "🎯" },
           { number: "10+", label: "Projects Completed", icon: "🚀" },
           { number: "5+", label: "Certifications", icon: "🏆" },
-          { number: "6.5", label: "CGPA", icon: "📚" }
+          { number: "6.8", label: "CGPA", icon: "📚" }
         ].map((stat, index) => (
           <motion.div
             key={index}

@@ -130,7 +130,7 @@ function About() {
               { icon: '🧩', number: '200+', label: 'LeetCode Problems', color: '#ff6b6b' },
               { icon: '🚀', number: '10+', label: 'Projects Completed', color: '#ff8e53' },
               { icon: '🏆', number: '5+', label: 'Certifications', color: '#667eea' },
-              { icon: '📚', number: '6.5', label: 'CGPA', color: '#764ba2' }
+              { icon: '📚', number: '6.8', label: 'CGPA', color: '#764ba2' }
             ].map((stat, index) => (
               <motion.div
                 key={index}

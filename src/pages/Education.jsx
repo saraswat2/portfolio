@@ -7,7 +7,7 @@ function Education() {
       degree: "Bachelor of Technology - Computer Science and Engineering",
       institution: "Lovely Professional University, Punjab, India",
       duration: "Since Aug 2023",
-      cgpa: "6.5 CGPA",
+      cgpa: "6.8 CGPA",
       icon: "🎓"
     },
     {
