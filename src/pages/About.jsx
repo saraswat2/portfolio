@@ -47,9 +47,10 @@ function About() {
                 Hello! I'm <motion.strong 
                   style={{ color: '#ff6b6b', fontSize: '1.3rem' }}
                   whileHover={{ scale: 1.1, textShadow: '0 0 20px rgba(255,107,107,0.8)' }}
-                >Himanshu Saraswat</motion.strong>, a passionate Software Developer 
-                currently pursuing my Bachelor's degree in Computer Science and Engineering at 
-                <strong style={{ color: '#ff8e53' }}> Lovely Professional University, Punjab</strong>.
+                >Himanshu Saraswat</motion.strong>, a Software Engineer driven by a passion for architecting 
+                high-performance web systems with real-world impact. I blend a rigorous understanding of{' '}
+                <strong style={{ color: '#ff6b6b' }}>Data Structures & Algorithms</strong> (proven by{' '}
+                <strong style={{ color: '#ff6b6b' }}>200+ LeetCode problems</strong>) with practical full-stack development.
               </motion.p>
               
               <motion.p
@@ -58,10 +59,11 @@ function About() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
               >
-                I specialize in building scalable web applications and solving complex algorithmic 
-                problems. With a strong foundation in <strong style={{ color: '#ff6b6b' }}>Data Structures & Algorithms</strong>, 
-                I've solved <strong style={{ color: '#ff6b6b' }}>200+ problems on LeetCode</strong> and actively participate in 
-                competitive programming.
+                I leverage tools like <strong style={{ color: '#ff6b6b' }}>Java, Spring Boot, React.js, and MySQL</strong> to 
+                build efficient, scalable solutions. Highly proficient in{' '}
+                <strong style={{ color: '#ff8e53' }}>AWS and cloud infrastructure</strong>, continuously exploring modern 
+                cloud technologies to bridge the gap between development and deployment, with a track record of 
+                delivering robust systems and optimized web applications.
               </motion.p>
               
               <motion.p
@@ -70,9 +72,8 @@ function About() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8 }}
               >
-                My journey in tech has been driven by curiosity and a desire to create impactful 
-                solutions. I enjoy working with modern technologies like <strong style={{ color: '#ff6b6b' }}>React.js, Java, 
-                Spring Boot, and MySQL</strong>, and I'm always eager to learn new tools and frameworks.
+                Currently pursuing my <strong style={{ color: '#ff6b6b' }}>Computer Science degree at LPU, Punjab</strong>, 
+                I am committed to continuous learning and contributing to the future of technology.
               </motion.p>
             </div>
 
@@ -130,7 +131,7 @@ function About() {
               { icon: '🧩', number: '200+', label: 'LeetCode Problems', color: '#ff6b6b' },
               { icon: '🚀', number: '10+', label: 'Projects Completed', color: '#ff8e53' },
               { icon: '🏆', number: '5+', label: 'Certifications', color: '#667eea' },
-              { icon: '📚', number: '6.8', label: 'CGPA', color: '#764ba2' }
+              { icon: '📚', number: '6.5', label: 'CGPA', color: '#764ba2' }
             ].map((stat, index) => (
               <motion.div
                 key={index}

@@ -33,7 +33,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
 
-        <footer style={{ textAlign: 'center', padding: '2rem', marginTop: '3rem', background: 'rgba(255,255,255,0.8)' }}>
+        <footer>
           <p>© 2026 Himanshu Saraswat. Made with ❤️ using React</p>
         </footer>
       </div>

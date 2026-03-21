@@ -89,6 +89,7 @@ body {
   min-height: 100vh;
   color: #fff;
   padding: 2rem;
+  padding-top: 90px;
   position: relative;
   overflow: hidden;
 }
@@ -166,6 +167,8 @@ body {
   color: #fff;
   margin-bottom: 2rem;
 }
+
+.dark-hero-buttons {
   display: flex;
   gap: 1.5rem;
   margin-bottom: 3rem;
