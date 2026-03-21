@@ -33,7 +33,7 @@ function Projects() {
       tech: ["C++", "Data Structures", "Algorithms", "OOP"],
       github: "https://github.com/saraswat2",
       date: "2025",
-      image: null
+      image: "/portfolio/lib.png"
     }
   ]
 
