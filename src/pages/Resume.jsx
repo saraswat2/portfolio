@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion'
 import { FiDownload, FiExternalLink } from 'react-icons/fi'
-import resumeImage from '/resume.png'
 
 function Resume() {
-  const resumeImageUrl = resumeImage
+  const resumeImageUrl = '/portfolio/resume.png'
   
   return (
     <div className="dark-hero-page">
@@ -101,29 +100,7 @@ function Resume() {
           />
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          style={{
-            textAlign: 'center',
-            marginTop: '3rem',
-            padding: '2rem',
-            background: 'rgba(255, 107, 107, 0.1)',
-            borderRadius: '15px',
-            border: '1px solid rgba(255, 107, 107, 0.3)'
-          }}
-        >
-          <h3 style={{ color: '#ff6b6b', marginBottom: '1rem', fontSize: '1.3rem' }}>
-            📄 How to Add Your Resume
-          </h3>
-          <p style={{ color: '#b0b0b0', lineHeight: '1.8' }}>
-            1. Take a screenshot of your resume<br/>
-            2. Save it as <strong style={{ color: '#fff' }}>resume.png</strong><br/>
-            3. Place it in the <strong style={{ color: '#fff' }}>public</strong> folder<br/>
-            4. Refresh the page
-          </p>
-        </motion.div>
+
       </div>
     </div>
   )

@@ -3,9 +3,9 @@ import { FiGithub, FiMail } from 'react-icons/fi'
 import { SiLeetcode } from 'react-icons/si'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import profilePhoto from '/myphotos.png'
 
 function Home() {
+  const profilePhoto = '/portfolio/myphotos.png'
   const skills = ['HTML', 'CSS', 'JavaScript', 'Node.js', 'React', 'Git', 'GitHub']
   
   const titles = [
@@ -13,14 +13,30 @@ function Home() {
     'Full Stack Developer',
     'Cloud Computing Enthusiast'
   ]
+
+  const softSkills = [
+    { label: 'Problem-Solving', emoji: '🧩' },
+    { label: 'Team Player', emoji: '🤝' },
+    { label: 'Adaptability', emoji: '🔄' },
+    { label: 'Communication', emoji: '💬' },
+    { label: 'Time Management', emoji: '⏰' },
+    { label: 'Leadership', emoji: '👑' }
+  ]
   
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0)
+  const [currentSkillIndex, setCurrentSkillIndex] = useState(0)
   
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTitleIndex((prev) => (prev + 1) % titles.length)
     }, 3000)
-    
+    return () => clearInterval(interval)
+  }, [])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSkillIndex((prev) => (prev + 1) % softSkills.length)
+    }, 2000)
     return () => clearInterval(interval)
   }, [])
 
@@ -134,9 +150,7 @@ function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7 }}
-            style={{
-              marginTop: '0rem'
-            }}
+            style={{ marginTop: '0rem' }}
           >
             <p style={{ 
               fontSize: '0.85rem', 
@@ -183,6 +197,62 @@ function Home() {
                   {skill}
                 </motion.span>
               ))}
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+            style={{ marginTop: '1.5rem' }}
+          >
+            <p style={{ 
+              fontSize: '0.85rem', 
+              color: '#888', 
+              marginBottom: '1rem', 
+              textTransform: 'uppercase', 
+              letterSpacing: '3px',
+              fontWeight: '600'
+            }}>
+              ✨ Soft Skills
+            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <motion.div
+                key={currentSkillIndex}
+                initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.5, type: 'spring' }}
+                style={{
+                  padding: '0.8rem 1.8rem',
+                  background: 'linear-gradient(135deg, rgba(255, 107, 107, 0.15), rgba(255, 142, 83, 0.15))',
+                  borderRadius: '30px',
+                  border: '2px solid rgba(255, 107, 107, 0.4)',
+                  fontSize: '1.1rem',
+                  fontWeight: '700',
+                  color: '#ff6b6b',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  boxShadow: '0 4px 20px rgba(255, 107, 107, 0.2)'
+                }}
+              >
+                <span>{softSkills[currentSkillIndex].emoji}</span>
+                <span>{softSkills[currentSkillIndex].label}</span>
+              </motion.div>
+              <div style={{ display: 'flex', gap: '0.4rem' }}>
+                {softSkills.map((_, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      width: i === currentSkillIndex ? '20px' : '8px',
+                      height: '8px',
+                      borderRadius: '4px',
+                      background: i === currentSkillIndex ? '#ff6b6b' : 'rgba(255,255,255,0.2)',
+                      transition: 'all 0.3s ease'
+                    }}
+                  />
+                ))}
+              </div>
             </div>
           </motion.div>
         </motion.div>

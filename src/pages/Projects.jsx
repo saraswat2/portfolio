@@ -26,7 +26,7 @@ function Projects() {
     },
     {
       title: "Library Management System",
-      description: "Integrated score tracking and game state management, allowing multi-round gameplay and competitive user experience",
+      description: "Built a Library Management System to handle book inventory, member registration, issue/return tracking, and fine calculation. Implemented using OOP principles with efficient data structures for fast search and retrieval operations.",
       tech: ["C++", "Data Structures", "Algorithms", "OOP"],
       github: "https://github.com/saraswat2",
       date: "2025"
