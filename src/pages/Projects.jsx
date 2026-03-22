@@ -17,7 +17,7 @@ function Projects() {
       tech: ["HTML5", "CSS3", "JavaScript", "Google Fonts", "Git"],
       github: "https://github.com/saraswat2",
       date: "Jan 2026",
-      image: "/portfolio/image1.png"
+      image: "/portfolio/web.png"
     },
     {
       title: "Dice Game",
@@ -25,7 +25,7 @@ function Projects() {
       tech: ["C++", "STL", "Console I/O", "Loops & Conditional Logic"],
       github: "https://github.com/saraswat2",
       date: "Jun 2025",
-      image: "/portfolio/dicegame.png"
+      image: "/portfolio/dicgame.png"
     },
     {
       title: "Library Management System",
