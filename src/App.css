@@ -137,7 +137,7 @@ body {
 
 /* ===== HERO CONTAINER ===== */
 .dark-hero-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -152,7 +152,7 @@ body {
 .dark-hero-left { padding: 32px; }
 
 .dark-hero-greeting {
-  font-size: 64px !important;
+  font-size: 56px !important;
   font-weight: 700;
   margin-bottom: 8px;
   color: #fff;
@@ -165,14 +165,14 @@ body {
 }
 
 .dark-hero-name {
-  font-size: 48px !important;
+  font-size: 42px !important;
   font-weight: 600;
   margin-bottom: 16px;
   color: #e0e0e0;
 }
 
 .dark-hero-title {
-  font-size: 40px !important;
+  font-size: 34px !important;
   font-weight: 700;
   color: #fff;
   margin-bottom: 32px;
@@ -359,15 +359,15 @@ body {
 
 /* ===== ABOUT SECTION ===== */
 .dark-about-section {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 32px auto;
-  padding: 32px 32px;
+  padding: 32px 40px;
   position: relative;
   z-index: 1;
 }
 
 .dark-section-title {
-  font-size: 40px !important;
+  font-size: 34px !important;
   font-weight: 700;
   margin-bottom: 32px;
   text-align: center;
@@ -448,12 +448,12 @@ body {
 
 /* ===== STATS ===== */
 .dark-stats-section {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 32px auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 24px;
-  padding: 0 32px;
+  padding: 0 40px;
   position: relative;
   z-index: 1;
 }
@@ -558,17 +558,17 @@ body {
 
 /* ===== PAGE CONTAINER ===== */
 .dark-page-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 32px 32px;
+  padding: 32px 40px;
   min-height: 100vh;
 }
 
 .dark-page-title {
-  font-size: 56px !important;
+  font-size: 48px !important;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
   color: #fff;
   animation: textGlow 3s ease-in-out infinite;
 }
