@@ -13,7 +13,7 @@ function Projects() {
     },
     {
       title: "Website Design Project",
-      description: "Built a responsive landing page prototype using semantic HTML and modular CSS. Implemented auto play hero demo video, testimonial carousel, and demo-request form with client-side validation. Organized assets and prepared the site for GitHub Pages.",
+      description: "Built a responsive landing page prototype using semantic HTML and modular CSS. Implemented auto play hero demo video, testimonial carousel, and demo-request form with client-side validation.",
       tech: ["HTML5", "CSS3", "JavaScript", "Google Fonts", "Git"],
       github: "https://github.com/saraswat2",
       date: "Jan 2026",
