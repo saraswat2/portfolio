@@ -50,8 +50,8 @@ function Projects() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
-          gap: '2rem'
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: '24px'
         }}>
           {projects.map((project, index) => (
             <motion.div

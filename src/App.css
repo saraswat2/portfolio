@@ -29,7 +29,8 @@ body {
 .navbar {
   background: rgba(26, 26, 46, 0.95);
   backdrop-filter: blur(10px);
-  padding: 14px 48px;
+  padding: 12px 48px;
+  height: 60px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   display: flex;
   justify-content: space-between;
@@ -43,6 +44,7 @@ body {
 
 .navbar.scrolled {
   padding: 10px 48px;
+  height: 56px;
   background: rgba(26, 26, 46, 0.98);
   box-shadow: 0 8px 30px rgba(0,0,0,0.5);
 }
@@ -101,7 +103,7 @@ body {
   min-height: 100vh;
   color: #fff;
   padding: 16px 32px;
-  padding-top: 80px;
+  padding-top: 72px;
   position: relative;
   overflow: hidden;
 }
@@ -672,7 +674,8 @@ footer {
   .dark-profile-image { width: 250px; height: 250px; }
   .dark-profile-placeholder { font-size: 64px !important; }
   .dark-contact-bar { position: static; transform: none; flex-direction: row; justify-content: center; margin: 32px 0; }
-  .navbar { padding: 16px 24px; }
+  .navbar { padding: 16px 24px; height: auto; }
   .nav-links { gap: 24px; }
   .logo { font-size: 26px !important; }
+  .projects-grid { grid-template-columns: 1fr !important; }
 }
