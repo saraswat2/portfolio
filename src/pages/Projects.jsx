@@ -16,6 +16,7 @@ function Projects() {
       description: "Built a responsive landing page prototype using semantic HTML and modular CSS. Implemented auto play hero demo video, testimonial carousel, and demo-request form with client-side validation.",
       tech: ["HTML5", "CSS3", "JavaScript", "Google Fonts", "Git"],
       github: "https://github.com/saraswat2",
+      live: "https://regal-cucurucho-837f62.netlify.app/",
       date: "Jan 2026",
       image: "/portfolio/web.png"
     },
@@ -167,7 +168,7 @@ function Projects() {
                     <FiGithub /> Code
                   </motion.a>
                   <motion.a
-                    href={project.github}
+                    href={project.live || project.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
@@ -192,3 +193,7 @@ function Projects() {
 }
 
 export default Projects
+
+
+
+

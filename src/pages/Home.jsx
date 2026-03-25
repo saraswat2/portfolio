@@ -1,11 +1,10 @@
 import { motion } from 'framer-motion'
 import { FiGithub, FiMail } from 'react-icons/fi'
 import { SiLeetcode } from 'react-icons/si'
-import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 function Home() {
-  const profilePhoto = '/portfolio/myphotos.png'
+  const profilePhoto = '/portfolio/myphoto.png'
   const skills = ['HTML', 'CSS', 'JavaScript', 'Node.js', 'React', 'Git', 'GitHub']
   
   const titles = [
@@ -99,11 +98,11 @@ function Home() {
             transition={{ delay: 0.5 }}
             style={{ display: 'flex', gap: '1.5rem', marginBottom: '2.5rem' }}
           >
-            <Link to="/projects" style={{ textDecoration: 'none' }}>
-              <motion.button 
+            <motion.button 
                 className="dark-btn-primary"
                 whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(255, 107, 107, 0.5)' }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => { const el = document.getElementById('projects'); if(el) window.scrollTo({ top: el.offsetTop - 60, behavior: 'smooth' }) }}
                 style={{
                   padding: '1rem 2.5rem',
                   fontSize: '1.1rem',
@@ -119,16 +118,12 @@ function Home() {
               >
                 <span style={{ position: 'relative', zIndex: 1 }}>🚀 Get a project</span>
               </motion.button>
-            </Link>
-            <Link to="/resume" style={{ textDecoration: 'none' }}>
+            
               <motion.button 
                 className="dark-btn-secondary"
-                whileHover={{ 
-                  scale: 1.05, 
-                  background: 'rgba(255, 107, 107, 0.15)',
-                  borderColor: '#ff6b6b'
-                }}
+                whileHover={{ scale: 1.05, background: 'rgba(255, 107, 107, 0.15)', borderColor: '#ff6b6b' }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => window.open('/portfolio/resume.png', '_blank')}
                 style={{
                   padding: '1rem 2.5rem',
                   fontSize: '1.1rem',
@@ -143,7 +138,6 @@ function Home() {
               >
                 📄 My resume
               </motion.button>
-            </Link>
           </motion.div>
 
           <motion.div 
@@ -461,3 +455,7 @@ function Home() {
 }
 
 export default Home
+
+
+
+

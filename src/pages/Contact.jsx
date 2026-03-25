@@ -49,7 +49,7 @@ function Contact() {
             maxWidth: '800px',
             margin: '0 auto',
             textAlign: 'center',
-            marginBottom: '4rem'
+            marginBottom: '2rem'
           }}
         >
           <p style={{ fontSize: '1.2rem', color: '#b0b0b0', lineHeight: '1.8' }}>
@@ -120,7 +120,7 @@ function Contact() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
           style={{
-            marginTop: '5rem',
+            marginTop: '2rem',
             textAlign: 'center'
           }}
         >
@@ -153,3 +153,7 @@ function Contact() {
 }
 
 export default Contact
+
+
+
+

@@ -12,7 +12,7 @@ function About() {
           About <span style={{ color: '#ff6b6b' }}>Me</span>
         </motion.h1>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '40px', marginBottom: '48px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '40px', marginBottom: '24px' }}>
           <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
             <div style={{
               background: 'rgba(255, 255, 255, 0.05)',
@@ -153,3 +153,7 @@ function About() {
 }
 
 export default About
+
+
+
+

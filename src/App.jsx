@@ -1,4 +1,3 @@
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -7,37 +6,47 @@ import Projects from './pages/Projects'
 import Education from './pages/Education'
 import Contact from './pages/Contact'
 import Achievements from './pages/Achievements'
-import Resume from './pages/Resume'
+import ThemeSwitcher from './components/ThemeSwitcher'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'crimson')
+
+  useEffect(() => {
+    if (theme === 'crimson') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+    localStorage.setItem('theme', theme)
+  }, [theme])
   return (
-    <Router>
-      <div className="app">
-        <div className="bg-circles">
-          <div className="circle circle-1"></div>
-          <div className="circle circle-2"></div>
-          <div className="circle circle-3"></div>
-        </div>
-
-        <Navbar />
-        
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/achievements" element={<Achievements />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-
-        <footer>
-          <p>© 2026 Himanshu Saraswat. Made with ❤️ using React</p>
-        </footer>
+    <div className="app">
+      <div className="bg-circles">
+        <div className="circle circle-1"></div>
+        <div className="circle circle-2"></div>
+        <div className="circle circle-3"></div>
       </div>
-    </Router>
+
+      <Navbar />
+
+      <main>
+        <section id="home"><Home /></section>
+        <section id="about"><About /></section>
+        <section id="skills"><Skills /></section>
+        <section id="projects"><Projects /></section>
+        <section id="education"><Education /></section>
+        <section id="achievements"><Achievements /></section>
+        <section id="contact"><Contact /></section>
+      </main>
+
+      <footer>
+        <p>© 2026 Himanshu Saraswat. Made with ❤️ using React</p>
+      </footer>
+
+      <ThemeSwitcher current={theme} onChange={setTheme} />
+    </div>
   )
 }
 
