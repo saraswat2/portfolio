@@ -22,6 +22,7 @@ function Home() {
     { label: 'Leadership', emoji: '👑' }
   ]
   
+  const [showResumeModal, setShowResumeModal] = useState(false)
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0)
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0)
   
@@ -123,7 +124,7 @@ function Home() {
                 className="dark-btn-secondary"
                 whileHover={{ scale: 1.05, background: 'rgba(255, 107, 107, 0.15)', borderColor: '#ff6b6b' }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => window.open('/portfolio/resume.png', '_blank')}
+                onClick={() => setShowResumeModal(true)}
                 style={{
                   padding: '1rem 2.5rem',
                   fontSize: '1.1rem',
@@ -450,6 +451,91 @@ function Home() {
           <SiLeetcode size={20} />
         </motion.a>
       </motion.div>
+
+      {/* Resume Modal */}
+      {showResumeModal && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setShowResumeModal(false)}
+          style={{
+            position: 'fixed', inset: 0,
+            background: 'rgba(0,0,0,0.7)',
+            backdropFilter: 'blur(6px)',
+            zIndex: 1000,
+            display: 'flex', alignItems: 'center', justifyContent: 'center'
+          }}
+        >
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            onClick={e => e.stopPropagation()}
+            style={{
+              background: 'linear-gradient(135deg, #1a1a2e, #16213e)',
+              border: '1px solid rgba(255,107,107,0.3)',
+              borderRadius: '20px',
+              padding: '40px',
+              maxWidth: '420px',
+              width: '90%',
+              textAlign: 'center',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.5)'
+            }}
+          >
+            <div style={{ fontSize: '3rem', marginBottom: '16px' }}>📄</div>
+            <h3 style={{ fontSize: '1.4rem', color: '#fff', marginBottom: '8px', fontWeight: '700' }}>
+              My Resume
+            </h3>
+            <p style={{ color: '#b0b0b0', fontSize: '0.9rem', marginBottom: '28px' }}>
+              View online or download to your device
+            </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+              <motion.a
+                href="https://drive.google.com/file/d/1cfK3Kknd6RyVQ1wWyk4E_QNZ2X1Rh1vc/view?usp=drive_link"
+                target="_blank" rel="noopener noreferrer"
+                whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
+                style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
+                  padding: '14px 24px',
+                  background: 'linear-gradient(135deg, #ff6b6b, #ff8e53)',
+                  color: '#fff', borderRadius: '10px',
+                  textDecoration: 'none', fontWeight: '700', fontSize: '1rem'
+                }}
+              >
+                👁️ View Resume
+              </motion.a>
+
+              <motion.a
+                href="/portfolio/myfinalcv (3).docx"
+                download="Himanshu_Saraswat_Resume.docx"
+                whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
+                style={{
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px',
+                  padding: '14px 24px',
+                  background: 'rgba(255,255,255,0.08)',
+                  border: '1px solid rgba(255,255,255,0.2)',
+                  color: '#fff', borderRadius: '10px',
+                  textDecoration: 'none', fontWeight: '600', fontSize: '1rem'
+                }}
+              >
+                ⬇️ Download (.docx)
+              </motion.a>
+
+              <button
+                onClick={() => setShowResumeModal(false)}
+                style={{
+                  background: 'transparent', border: 'none',
+                  color: '#888', cursor: 'pointer', fontSize: '0.9rem',
+                  marginTop: '4px'
+                }}
+              >
+                Cancel
+              </button>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
     </div>
   )
 }

@@ -41,145 +41,84 @@ function Projects() {
   return (
     <div className="dark-hero-page">
       <div className="dark-page-container">
-        <motion.h1
-          className="dark-page-title"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          My <span style={{ color: '#ff6b6b' }}>Projects</span>
+        <motion.h1 className="dark-page-title" initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
+          My <span style={{ color: 'var(--accent)' }}>Projects</span>
         </motion.h1>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '24px'
-        }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '24px' }}>
           {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
+            <motion.div key={index}
+              initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -10, scale: 1.02 }}
+              whileHover={{ y: -8, scale: 1.02 }}
               style={{
-                background: 'rgba(255, 255, 255, 0.05)',
+                background: 'rgba(255,255,255,0.05)',
                 backdropFilter: 'blur(10px)',
                 borderRadius: '15px',
-                border: '1px solid rgba(255, 255, 255, 0.1)',
-                transition: 'all 0.3s',
-                position: 'relative',
-                overflow: 'hidden'
-              }}
-            >
-              {/* Project Image */}
-              {project.image ? (
-                <div style={{
-                  width: '100%',
-                  height: '200px',
-                  overflow: 'hidden',
-                  position: 'relative'
-                }}>
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      transition: 'transform 0.4s ease'
-                    }}
+                border: '1px solid rgba(255,255,255,0.1)',
+                overflow: 'hidden', position: 'relative',
+                transition: 'all 0.3s'
+              }}>
+              {project.image && (
+                <div style={{ width: '100%', height: '190px', overflow: 'hidden', position: 'relative' }}>
+                  <img src={project.image} alt={project.title}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s' }}
                     onMouseEnter={e => e.target.style.transform = 'scale(1.08)'}
                     onMouseLeave={e => e.target.style.transform = 'scale(1)'}
-                    onError={e => { e.target.parentElement.style.display = 'none' }}
-                  />
+                    onError={e => { e.target.parentElement.style.display = 'none' }} />
                   <div style={{
-                    position: 'absolute',
-                    bottom: 0,
-                    left: 0,
-                    right: 0,
-                    height: '60px',
-                    background: 'linear-gradient(transparent, rgba(26,26,46,0.95))'
+                    position: 'absolute', bottom: 0, left: 0, right: 0, height: '60px',
+                    background: 'linear-gradient(transparent, rgba(16,16,32,0.95))'
                   }} />
-                </div>
-              ) : (
-                <div style={{
-                  width: '100%',
-                  height: '140px',
-                  background: 'linear-gradient(135deg, rgba(255,107,107,0.15), rgba(102,126,234,0.15))',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '4rem'
-                }}>
-                  📚
                 </div>
               )}
 
-              <div style={{ padding: '1.5rem 2rem 2rem' }}>
-                {/* Date badge */}
+              <div style={{ padding: '1.4rem 1.6rem 1.8rem' }}>
                 <div style={{
-                  display: 'inline-block',
-                  padding: '0.3rem 0.8rem',
-                  background: 'rgba(255, 107, 107, 0.2)',
-                  borderRadius: '20px',
-                  fontSize: '0.8rem',
-                  color: '#ff6b6b',
-                  fontWeight: '600',
-                  marginBottom: '0.8rem'
+                  display: 'inline-block', padding: '3px 12px',
+                  background: 'rgba(255,107,107,0.2)', borderRadius: '20px',
+                  fontSize: '0.75rem', color: 'var(--accent)', fontWeight: '700', marginBottom: '10px'
                 }}>
                   {project.date}
                 </div>
-
-                <h3 style={{ fontSize: '1.4rem', marginBottom: '0.8rem', color: '#fff' }}>
+                <h3 style={{ fontSize: '1.2rem', marginBottom: '8px', color: '#fff', fontWeight: '700' }}>
                   {project.title}
                 </h3>
-                <p style={{ color: '#b0b0b0', marginBottom: '1.2rem', lineHeight: '1.7', fontSize: '0.95rem' }}>
+                <p style={{ color: '#a0a0b0', marginBottom: '14px', lineHeight: '1.6', fontSize: '0.88rem' }}>
                   {project.description}
                 </p>
-                <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
+                <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginBottom: '16px' }}>
                   {project.tech.map((tech, i) => (
                     <span key={i} style={{
-                      padding: '0.3rem 0.8rem',
-                      background: 'rgba(255, 107, 107, 0.1)',
-                      border: '1px solid rgba(255, 107, 107, 0.3)',
-                      borderRadius: '20px',
-                      fontSize: '0.8rem',
-                      color: '#ff6b6b'
-                    }}>
-                      {tech}
-                    </span>
+                      padding: '3px 10px',
+                      background: 'rgba(255,107,107,0.1)',
+                      border: '1px solid rgba(255,107,107,0.3)',
+                      borderRadius: '20px', fontSize: '0.75rem', color: 'var(--accent)', fontWeight: '600'
+                    }}>{tech}</span>
                   ))}
                 </div>
-                <div style={{ display: 'flex', gap: '1rem' }}>
-                  <motion.a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  <motion.a href={project.github} target="_blank" rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     style={{
-                      display: 'flex', alignItems: 'center', gap: '0.5rem',
-                      padding: '0.6rem 1.2rem',
-                      background: 'rgba(255, 255, 255, 0.1)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
-                      borderRadius: '5px', color: '#fff',
-                      textDecoration: 'none', fontSize: '0.9rem'
-                    }}
-                  >
+                      display: 'flex', alignItems: 'center', gap: '6px',
+                      padding: '7px 16px',
+                      background: 'rgba(255,255,255,0.08)',
+                      border: '1px solid rgba(255,255,255,0.2)',
+                      borderRadius: '8px', color: '#fff',
+                      textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600'
+                    }}>
                     <FiGithub /> Code
                   </motion.a>
-                  <motion.a
-                    href={project.live || project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <motion.a href={project.live || project.github} target="_blank" rel="noopener noreferrer"
                     whileHover={{ scale: 1.05 }}
                     style={{
-                      display: 'flex', alignItems: 'center', gap: '0.5rem',
-                      padding: '0.6rem 1.2rem',
-                      background: '#ff6b6b',
-                      borderRadius: '5px', color: '#fff',
-                      textDecoration: 'none', fontSize: '0.9rem'
-                    }}
-                  >
+                      display: 'flex', alignItems: 'center', gap: '6px',
+                      padding: '7px 16px',
+                      background: 'var(--accent)',
+                      borderRadius: '8px', color: '#fff',
+                      textDecoration: 'none', fontSize: '0.85rem', fontWeight: '600'
+                    }}>
                     <FiExternalLink /> View
                   </motion.a>
                 </div>
@@ -193,7 +132,3 @@ function Projects() {
 }
 
 export default Projects
-
-
-
-
